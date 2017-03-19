@@ -11,6 +11,18 @@ menuconfig INPUT_TOUCHSCREEN
 
 if INPUT_TOUCHSCREEN
 
+config TOUCHSCREEN_ZINITIX_BT532
+	tristate "ZINITIX BT532 I2C Touchscreen"
+	depends on I2C
+	help
+	  Say Y here if you have Zinitix BT532 I2C touchscreen,
+	  such as BT532, connected to your system.
+
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called BT532.
+
 config TOUCHSCREEN_88PM860X
 	tristate "Marvell 88PM860x touchscreen"
 	depends on MFD_88PM860X
@@ -1029,6 +1041,18 @@ config TOUCHSCREEN_GT9XX
 	  report 5 touches at a time.
 
           If unsure, say N.
+
+config TOUCHSCREEN_ZINITIX_BT531
+	tristate "ZINITIX BT531 I2C Touchscreen"
+	depends on I2C
+	help
+	  Say Y here if you have Zinitix BT531 I2C touchscreen,
+	  such as BT531, connected to your system.
+
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called BT531.
 
 source "drivers/input/touchscreen/gt9xx/Kconfig"
 
