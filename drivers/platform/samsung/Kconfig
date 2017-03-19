@@ -1,0 +1,24 @@
+# Samsung configuration options
+
+config MACH_SAMSUNG
+	bool "SAMSUNG device"
+	depends on ARCH_MSM
+	help
+	  Support for Samsung products
+
+config MACH_SAMSUNG_MSM8x26
+	bool "SAMSUNG MSM8x26"
+	depends on ARCH_MSM
+	select MACH_SAMSUNG
+	help
+	  Support for MSM8x26 Samsung variants
+
+menu "Samsung board selection"
+
+	config MACH_SAMSUNG_MS01xx
+		bool "SAMSUNG MS01xx board"
+		select MACH_SAMSUNG_MSM8x26
+		help
+		  Support for Samsung Galaxy Grand 2 variant
+
+endmenu
